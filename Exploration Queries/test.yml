@@ -1,0 +1,54 @@
+id: 143c78e5-19a7-406f-ba57-77c44dfda31e
+name: UnusualTest2222
+description: |
+  'Anomaly'
+severity: Medium
+requiredDataConnectors: []
+queryFrequency: 1h
+queryPeriod: 4d
+triggerOperator: gt
+triggerThreshold: 0
+tactics: []
+techniques: []
+query: |
+  // You can leave out Anomalies that are already monitored through other Analytics Rules
+  //let _MonitoredRules = dynamic(["TestAlertName"]);
+  let query_frequency = 1h;
+  let query_lookback = 3d;
+  Anomalies
+  | where TimeGenerated > ago(query_frequency)
+  //| where not(RuleName has_any (_MonitoredRules))
+  | join kind = leftanti (
+      Anomalies
+      | where TimeGenerated between (ago(query_frequency + query_lookback)..ago(query_frequency))
+      | distinct RuleName
+  ) on RuleName
+incidentConfiguration:
+  createIncident: true
+  groupingConfiguration:
+    enabled: true
+    reopenClosedIncident: false
+    lookbackDuration: 1h
+    matchingMethod: Selected
+    groupByEntities: []
+    groupByAlertDetails:
+      - DisplayName
+    groupByCustomDetails: []
+eventGroupingSettings:
+  aggregationKind: AlertPerResult
+alertDetailsOverride:
+  alertDisplayNameFormat: Unusual Anomaly - {{RuleName}}
+  alertTacticsColumnName: Tactics
+sentinelEntitiesMappings:
+  - columnName: Entities
+version: 1.0.1
+kind: Scheduled
+metadata:
+    source:
+        kind: Community
+    author:
+        name: Jose Sebastian Canos
+    support:
+        tier: Community
+    categories:
+        domains: [ "Security - Others" ]
