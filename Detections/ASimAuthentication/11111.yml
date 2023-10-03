@@ -1,4 +1,4 @@
-name: Potential1111111
+name: Potentiasay
 description: |
   'This query searches for failed attempts to log in from more than 15 various users within a 5 minute timeframe from the same source. This is a potential indication of a password spray attack
    To use this analytics rule, make sure you have deployed the [ASIM normalization parsers](https://aka.ms/ASimAuthentication)'
