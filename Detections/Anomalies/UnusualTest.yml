@@ -1,7 +1,7 @@
 id: cdbd9a0b-aa7c-4179-a821-67bd4df966ba
 name: UnusualTest
 description: |
-  'Anomaly Rules generate events in the Anomalies table. This scheduled rule tries to detect Anomalies that are not usual, they could be a type of Anomaly that has recently been activated, or an infrequent type. The detected Anomaly should be reviewed, if it is relevant enough, eventually a separate scheduled Analytics Rule could be created specifically for that Anomaly Type, so an alert and/or incident is generated everytime that type of Anomaly happens.'
+  'Anomaly'
 severity: Medium
 requiredDataConnectors: []
 queryFrequency: 1h
