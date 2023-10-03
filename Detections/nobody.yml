@@ -1,0 +1,22 @@
+id: e4d4b82e-070d-4398-aefc-168ba95c470f
+name: nobody
+description: |
+  'Anomaly'
+severity: Medium
+requiredDataConnectors: []
+queryFrequency: 1h
+queryPeriod: 4d
+triggerOperator: gt
+triggerThreshold: 0
+tactics: []
+techniques: []
+query:
+metadata:
+    source:
+        kind: Community
+    author:
+        name: Jose Sebastian Canos
+    support:
+        tier: Community
+    categories:
+        domains: [ "Security - Others" ]
