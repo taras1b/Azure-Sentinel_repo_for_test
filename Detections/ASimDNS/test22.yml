@@ -1,5 +1,5 @@
-id: b70afbf6-0f81-4fa3-a315-0bf67011d7b5
-name: PowerShellTest
+id: 455ca3d0-926d-433c-9923-2c8894c92cfb
+name: PowerShellTest2222
 description: |
   'Finds PowerShell execution events that could involve a download'
 requiredDataConnectors: []
