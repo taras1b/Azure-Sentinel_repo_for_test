@@ -1,7 +1,7 @@
 id: 86561971-265d-454a-80a2-4e9aaba9b9cc
 name: AnomalyTestTest
 description: |
-  'Identifies sign-in anomalies from an IP in the last hour'
+  'Identifies'
 severity: Medium
 requiredDataConnectors:
   - connectorId: AzureActiveDirectory
