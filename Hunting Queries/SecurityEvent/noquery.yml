@@ -1,0 +1,12 @@
+id: 000f44d3-9573-4757-bee7-1b1f004d85fd
+name: noquery
+description: |
+  'Detects Active Directory account lockouts'
+requiredDataConnectors:
+  - connectorId: SecurityEvents
+    dataTypes:
+      - SecurityEvent
+tactics:
+  - Impact
+relevantTechniques:
+  - T1531
