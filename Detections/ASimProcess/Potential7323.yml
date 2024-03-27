@@ -1,5 +1,5 @@
 id: b1a74214-6a8e-4fac-ac86-60305d2b817e
-name: Potential7323
+name: Potential7323 test
 description: |
   'This detection looks for command line parameters associated with the use of Sysinternals sdelete (https://docs.microsoft.com/sysinternals/downloads/sdelete) to delete multiple files on a host's C drive.
   A threat actor may re-name the tool to avoid detection and then use it for destructive attacks on a host.
