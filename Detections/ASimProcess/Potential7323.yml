@@ -5,7 +5,7 @@ description: |
   A threat actor may re-name the tool to avoid detection and then use it for destructive attacks on a host.
   This detection uses the ASIM imProcess parser, this will need to be deployed before use - https://docs.microsoft.com/azure/sentinel/normalization'
 severity: Low
-requiredDataConnectors: []
+requiredDataConnectors: sysmon
 queryFrequency: 1h
 queryPeriod: 1h
 triggerOperator: gt
@@ -48,8 +48,7 @@ kind: Scheduled
 metadata:
     source:
         kind: Community
-    author:
-        name: Microsoft Security Research
+    author: Microsoft Security Research
     support:
         tier: Community
     categories:
